@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+    <!--Firebase JS SDK-->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Moment-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+    <!--Train Schedule-->
+    <div class="main-container">
+        <div class="header">
+            <h2>Platform Assignment System</h2>
+            <div class="add-button" data-toggle="modal" data-target="#modal" onclick="void(0)">
+                + Add Train
+            </div>
+        </div>
+        <div class="schedule">
+            <div class="schedule-title">
+                <div class="title">Train</div>
+                <div class="title">Destination</div>
+                <div class="title">Frequency (min)</div>
+                <div class="title">Next Arrival</div>
+                <div class="title">Platform no.</div>
+                <div class="action"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Add Train Modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add A New Train</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="schedule-form train-form">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Train Name</label><br>
+                                    <input type="text" id="train-name" placeholder="eg: Rajdhani Express" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Destination</label><br>
+                                    <input type="text" id="destination" placeholder="City,State" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>First Train Time</label><br>
+                                    <input type="text" id="first-train-time" placeholder="HH:MM" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Frequency (min)</label><br>
+                                    <input type="number" id="frequency" placeholder="eg: 40" required>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="submit-form">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Edit Train Modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="edit-modal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Train</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="edit-form train-form">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Train Name</label><br>
+                                    <input type="text" id="edit-name" placeholder="Acela Express" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Destination</label><br>
+                                    <input type="text" id="edit-destination" placeholder="New York City, NY" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>First Train Time</label><br>
+                                    <input type="text" id="edit-train-time" placeholder="HH:MM - Military Time" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Frequency (min)</label><br>
+                                    <input type="number" id="edit-frequency" placeholder="40" required>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="submit-form">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <!--Javascript-->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>

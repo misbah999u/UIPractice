@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+    
+    .header {
+        text-align: center;
+        padding: 32px;
+    }
+    
+    .row {
+        display: -ms-flexbox;
+        /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap;
+        /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    /* Create four equal columns that sits next to each other */
+    
+    .column {
+        -ms-flex: 25%;
+        /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+    
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Train Stations</h1>
+        <p>Gallery</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="row">
+        <div class="column">
+            <img src="sta1.jpg" style="width:100%">
+            <img src="sta2.jpg" style="width:100%">
+            <img src="sta3.jpg" style="width:100%">
+            <img src="sta4.jpg" style="width:100%">
+            <img src="sta5.jpg" style="width:100%">
+            <img src="sta8.jpg" style="width:100%">
+            <img src="sta9.jpg" style="width:100%">
+            <img src="sta27.jpg" style="width:100%">
+            <img src="sta29.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="sta10.jpg" style="width:100%">
+            <img src="sta6.jpg" style="width:100%">
+            <img src="sta7.jpg" style="width:100%">
+            <img src="sta11.jpg" style="width:100%">
+            <img src="sta12.jpg" style="width:100%">
+            <img src="sta13.jpg" style="width:100%">
+            <img src="sta30.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="sta14.jpg" style="width:100%">
+            <img src="sta15.jpg" style="width:100%">
+            <img src="sta16.jpg" style="width:100%">
+            <img src="sta17.jpg" style="width:100%">
+            <img src="sta18.jpg" style="width:100%">
+            <img src="sta19.jpg" style="width:100%">
+            <img src="sta20.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="sta21.jpg" style="width:100%">
+            <img src="sta22.jpg" style="width:100%">
+            <img src="sta23.jpg" style="width:100%">
+            <img src="sta24.jpg" style="width:100%">
+            <img src="sta25.jpg" style="width:100%">
+            <img src="sta26.jpg" style="width:100%">
+            <img src="sta31.jpg" style="width:100%">
+        </div>
+    </div>
+
+</body>
+
+</html>

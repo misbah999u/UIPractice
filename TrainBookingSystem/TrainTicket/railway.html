@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script>
+	window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+</script>
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+
+<style>
+body {
+	margin:0;
+	font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+
+#navbar .bg-img {
+  /* The image used */
+  background-image: url("r2.jpg");
+
+  min-height: 660px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+  /* Needed to position the navbar */
+  position: center;
+}
+
+
+
+
+
+
+/* Position the navbar container inside the image */
+#navbar .container {
+  position: absolute;
+  margin: 30px;
+  width: auto;
+}
+
+#navbar {
+  background-color: #333;
+  position: absolute;
+  top: -10px;
+ 
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+/* The navbar */
+#navbar .topnav {
+  overflow: hidden;
+  background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+/* Navbar links */
+#navbar .topnav a {
+  float: left;
+  display:block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 35px;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 3px solid transparent; 
+}
+#navbar .topnav-right {
+  float: right;
+}
+
+
+#navbar .topnav a:hover {
+  border-bottom: 3px solid rgb(43, 2, 2);
+}
+#navbar .topnav a.active
+{
+	border-bottom: 3px solid rgb(43, 2, 2);
+}
+
+
+#navbar .dropbtn {
+  background-color:hsla(0, 0%, 0%, 0.3);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  
+}
+
+#navbar .dropdown {
+  position: absolute;
+  display:inline-block;
+
+}
+
+#navbar .dropdown-content {
+  display:none;
+  position: absolute;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  min-width: 10px;
+  overflow:auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#navbar .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#navbar .dropdown-content a:hover 
+{
+  background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+#navbar .dropdown:hover .dropdown-content
+ {
+  
+  display:block;
+  }
+
+#navbar .dropdown:hover .dropbtn
+ {
+   background-color:hsla(0, 0%, 0%, 0.3);}
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+  
+
+	<div id="navbar">
+<div class="bg-img">
+  <div class="container">
+    <div class="topnav">
+
+		
+      
+		
+      <a href="#home" class="active">Home</a>
+      <a href="#meals">Meals</a> 
+	 
+      <a href="#ewallet">eWallet</a>
+      <a href="#news">News</a>
+   
+       
+         <a href="#contact">Contact</a>
+       <a href="#about">About</a>
+       <div class="fas">
+        <a href="#user">&#xf007;</a>
+       <a href="#chat">&#xf27a;</a>
+        <a href="#search">&#xf002;</a>
+        
+        
+        </div>
+       
+		<div class="dropdown">
+      <button class="dropbtn">Holidays</button>
+      <div class="dropdown-content">
+        <a href="#">hola</a>
+      </div>
+		</div>
+    
+    
+    
+          
+      </div>
+
+	    
+</div>
+  </div>
+</div>
+
+
+
+
+  
+</body>
+</html>

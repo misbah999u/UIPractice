@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Platform Assignment</title>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<head>
+    <style>
+        body {
+            background-image: url("r2.jpg");
+            background-color: #2d2d2d;
+            #timedate {
+                font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+                text-align: left;
+                width: 50%;
+                margin: 40px auto;
+                color: #fff;
+                border-left: 3px solid #ed1f24;
+                padding: 20px;
+                position: center;
+            }
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: hsla(0, 0%, 0%, 0.3);
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: hsla(0, 0%, 0%, 0.3);
+        }
+        
+        li.dropdown {
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: hsla(0, 0%, 0%, 0.3);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px hsla(0, 0%, 0%, 0.3);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: hsla(0, 0%, 0%, 0.3);
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: hsla(0, 0%, 0%, 0.3);
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 300px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 320px 120px;
+        }
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="railway1.html">
+        <img src="logo.jpg" align="left">
+    </a>
+
+
+
+
+
+
+
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Trains</a>
+            <div class="dropdown-content">
+                <a href="#">Book Ticket</a>
+                <a href="#">Train Schedule</a>
+                <a href="#">Track Your Train</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Holidays</a>
+            <div class="dropdown-content">
+                <a href="#">Special Trains</a>
+                <a href="#">Packages</a>
+
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Stays</a>
+            <div class="dropdown-content">
+                <a href="#">Hotels</a>
+                <a href="#">Retiring Rooms</a>
+                <a href="#">Lounge</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Loyalty</a>
+            <div class="dropdown-content">
+                <a href="#">About SBI Credit Card</a>
+                <a href="#">SBI Platinum Credit Card E-Apply</a>
+                <a href="#">Lounge</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Meals</a>
+            <div class="dropdown-content">
+                <a href="#">E-Catering</a>
+                <a href="#">Standard Menu Rates</a>
+
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Promotions</a>
+            <div class="dropdown-content">
+                <a href="#">Advertise With Indian Railways</a>
+                <a href="#">Indian Railways Tourism App</a>
+                <a href="#">Rail Drishti</a>
+                <a href="#">Deals On Indian Railways</a>
+            </div>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">At Stations</a>
+            <div class="dropdown-content">
+                <a href="#">Wifi Raiway Staions</a>
+                <a href="#">Battery Operated Cars</a>
+                <a href="#">E Wheel Chair</a>
+                <a href="#">Retiring Room</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">eWallet</a>
+            <div class="dropdown-content">
+                <a href="#">About eWallet</a>
+                <a href="#">eWallet User Guide</a>
+
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">More</a>
+            <div class="dropdown-content">
+                <a href="#">Link Your Aadhar</a>
+                <a href="#">Counter Ticket Cancellation</a>
+                <a href="#">Counter Ticket Boarding Point Changed</a>
+                <a href="#">Forgot User ID</a>
+                <a href="#">Forgot Password</a>
+            </div>
+        </li>
+
+        <div class="fas">
+            <li><a href="http://localhost/ContactForm-Mini-Project/ContactForm%20Mini%20Project/contactform/admin/">&#xf007;</a></li>
+            <li><a href="http://localhost/ONLINE_TICKET_RESERVATION_SYSTEM_IN_PHP_WITH_SOURCE_CODE/Online%20Ticket%20Reservation%20PHP/ticket%20reservation/">&#xf238;</a></li>
+            <li><a href="http://localhost/SimpleChatbox_PHP/chatbox/">&#xf075;</a></li>
+            <li><a href="calendar.html">&#xf073;</a></li>
+            <li><a href="Gallery1.html">&#xf030;</a></li>
+            <li><a href="http://localhost/ContactForm-Mini-Project/ContactForm%20Mini%20Project/contactform/">&#xf879;</a></li>
+            <li><a href="#">&#xf059;</a></li>
+            <li><a href="search1.html">&#xf002;</a></li>
+        </div>
+    </ul>
+
+
+
+
+    <button class="button" style="vertical-align:middle"><span><a style="text-decoration:none" href="#"><font color="White">Book A Ticket</font></a></span></button>
+
+
+    <button class="button" style="vertical-align:middle"><span><a style="text-decoration:none" href="#"><font color="White">Platform Assignment</font></span></button>
+
+</body>
+
+</html>
